@@ -1,0 +1,28 @@
+#with numpy
+import numpy as np
+class queue:
+  def init(self):
+    self.list=np.arange(1,2,3,4,5)
+  def enqueue(self,data):
+    x= np.append(self.list,data)
+    return x
+  def dequeue(self):
+    y=np.delete(self.list,1)
+    return y
+  def rear(self):
+    return self.list[-1]
+  def front(self):
+    return self.list[0]
+  def isEmpty(self):
+    return (len(self.list)==0)
+  def size(self):
+    return (len(self.list)>5)
+  def length(self):
+    return len(self.list)
+def main():
+  q=queue()
+  q.enqueue(20)
+  q.enqueue(45)
+  print(q)
+  q.deque()
+  print(q)
